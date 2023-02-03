@@ -73,6 +73,7 @@ class TabCategory extends StatelessWidget {
                           ],
                         ),
                       ),
+
                       Tab(
                         child: Row(
                           children: [
