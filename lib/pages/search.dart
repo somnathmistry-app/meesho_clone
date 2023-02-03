@@ -59,30 +59,32 @@ class _SearchPageState extends State<SearchPage> {
             textInputAction: TextInputAction.search,
             controller: _searchController,
             onSubmitted: (value) => _search(),
-            decoration: InputDecoration(
-              prefixIcon: const Icon(Icons.search),
-              suffixIcon: Container(
-                child: IntrinsicHeight(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      VerticalDivider(
-                          color: AppColors.blackGrey
-                      ),
-                      Icon(Icons.mic_none_sharp,color: AppColors.blackGrey),
-                      const SizedBox(width: 15,),
-                      Icon(Icons.camera_alt_outlined,color: AppColors.blackGrey),
-                      const SizedBox(width: 15),
-                    ],
-                  ),
-                ),
-              ),
+            style: const TextStyle(color:  Colors.black),
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.search),
+              // suffix: Container(),
+              // suffixIcon: Container(
+              //   child: IntrinsicHeight(
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.end,
+              //       children: [
+              //         VerticalDivider(
+              //             color: AppColors.blackGrey
+              //         ),
+              //         Icon(Icons.mic_none_sharp,color: AppColors.blackGrey),
+              //         const SizedBox(width: 15,),
+              //         Icon(Icons.camera_alt_outlined,color: AppColors.blackGrey),
+              //         const SizedBox(width: 15),
+              //       ],
+              //     ),
+              //   ),
+              // ),
               hintText: 'Search for Products...',
               border: InputBorder.none,
             ),
           ),
           actions: [
-            Container()
+             Container()
           ],
           // actions: [
           //   Container(
@@ -107,7 +109,6 @@ class _SearchPageState extends State<SearchPage> {
             itemCount: _filteredItems.length,
             itemBuilder: (context, index) {
               return ListTile(
-                leading: const Icon(Icons.history),
                 title: Text(_filteredItems[index]),
               );
             })

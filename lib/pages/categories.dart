@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meesho_clone/styles/common_modules/app_bar.dart';
 
 
 
@@ -8,7 +9,8 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(color: Colors.greenAccent),
+      appBar: MyAppBars.myAppBar(Container(), 'Categories'),
+      body: Container(),
     );
   }
 }

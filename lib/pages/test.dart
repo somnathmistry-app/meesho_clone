@@ -54,7 +54,7 @@ class _BottomNavigationBarExampleState extends State<BottomNavigationBarExample>
             currentIndex: _selectedIndex,
             type: BottomNavigationBarType.fixed,
             selectedItemColor: AppColors.themeColor,
-            unselectedItemColor: AppColors.offWhiteGrey,
+            unselectedItemColor: AppColors.blackGrey,
             unselectedLabelStyle: TextStyle(color: AppColors.offWhiteGrey),
             onTap: _onItemTapped)
     );

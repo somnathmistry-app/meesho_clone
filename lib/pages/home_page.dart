@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:meesho_clone/pages/categories.dart';
-import 'package:meesho_clone/pages/category.dart';
+import 'package:meesho_clone/pages/tab_category.dart';
 import 'package:meesho_clone/pages/search.dart';
 import 'package:meesho_clone/styles/app_colors.dart';
 import 'package:meesho_clone/styles/common_modules/app_bar.dart';
-import 'package:meesho_clone/styles/common_modules/my_snack_bar.dart';
+import 'package:meesho_clone/styles/common_modules/my_widgets.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,13 +21,13 @@ class HomePage extends StatelessWidget {
       'assets/images/img5.jpg',
       'assets/images/img6.jpg',
     ];
+
+
     return Scaffold(
-      appBar: MyAppBars.myAppBar('User'),
+      appBar: MyAppBars.myAppBar(MyWidgets.user(),'User'),
       body: Column(
         children: [
-          const SizedBox(
-            height: 15,
-          ),
+          const SizedBox(height: 15,),
           InkWell(
             onTap: () {
               Get.to(() => const SearchPage());
@@ -93,7 +92,7 @@ class HomePage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          Get.to(()=> const TabCategory());
+                          Get.to(()=>  TabCategory(1));
                         },
                         child: Tab(
                           child: Row(
@@ -106,7 +105,8 @@ class HomePage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap:() {
-                          Get.to(()=> const TabCategory());                        },
+                          Get.to(()=>  TabCategory(2));
+                          },
                         child: Tab(
                           child: Row(
                             children: [
@@ -118,7 +118,8 @@ class HomePage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap:() {
-                          Get.to(()=> const TabCategory());                        },
+                          Get.to(()=>  TabCategory(3));
+                          },
                         child: Tab(
                           child: Row(
                             children: [
@@ -130,7 +131,8 @@ class HomePage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap:() {
-                          Get.to(()=> const TabCategory());                        },
+                          Get.to(()=>  TabCategory(4));
+                          },
                         child: Tab(
                           child: Row(
                             children: [
@@ -142,7 +144,8 @@ class HomePage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap:() {
-                          Get.to(()=> const TabCategory());                        },
+                          Get.to(()=>  TabCategory(5));
+                          },
                         child: Tab(
                           child: Row(
                             children: [
@@ -159,10 +162,6 @@ class HomePage extends StatelessWidget {
                       children: [
                         ListView(
                         children: [
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          const SizedBox(height: 5),
                           Container(
                             height: 40,
                             color: AppColors.themeColorTwo,
@@ -230,8 +229,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-
+           ),
           // GridView.builder(
           //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           //       crossAxisCount: 2,
