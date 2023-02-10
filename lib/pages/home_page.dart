@@ -216,6 +216,38 @@ class HomePage extends StatelessWidget {
                             '      What are you looking for?',
                             style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                           ),
+                          GridView.builder(
+                              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                crossAxisSpacing: 10,
+                                mainAxisSpacing: 10,
+                                childAspectRatio: 4 / 3,
+                              ),
+                              shrinkWrap: true,
+                              itemCount: 5,
+                              physics: const NeverScrollableScrollPhysics(),
+                              padding: const EdgeInsets.all(15),
+                              itemBuilder: (BuildContext context, int index) {
+                                return Container(
+                                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
+                                    color: Colors.grey[300],),
+                                  // child: Column(
+                                  //   children: [
+                                  //     Container(
+                                  //       // height: 30,
+                                  //       decoration: BoxDecoration(
+                                  //           border: Border.all(
+                                  //               color: Colors.grey),
+                                  //           borderRadius: const BorderRadius.only(
+                                  //               bottomLeft: Radius.circular(5),
+                                  //               bottomRight: Radius.circular(5)
+                                  //           ),color: Colors.white
+                                  //       ),
+                                  //     ),
+                                  //   ],
+                                  // ),
+                                );
+                              })
                           ],
                         ),
                         Container(),
@@ -230,38 +262,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
            ),
-          // GridView.builder(
-          //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          //       crossAxisCount: 2,
-          //       crossAxisSpacing: 10,
-          //       mainAxisSpacing: 10,
-          //       childAspectRatio: 4 / 3,
-          //     ),
-          //     shrinkWrap: true,
-          //     itemCount: 5,
-          //     physics: const NeverScrollableScrollPhysics(),
-          //     padding: const EdgeInsets.all(15),
-          //     itemBuilder: (BuildContext context, int index) {
-          //       return Container(
-          //         decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-          //           color: Colors.grey[300],),
-          //         child: Column(
-          //           children: [
-          //             Container(
-          //              // height: 30,
-          //               decoration: BoxDecoration(
-          //                   border: Border.all(
-          //                       color: Colors.grey),
-          //                   borderRadius: const BorderRadius.only(
-          //                       bottomLeft: Radius.circular(5),
-          //                       bottomRight: Radius.circular(5)
-          //                   ),color: Colors.white
-          //               ),
-          //             ),
-          //           ],
-          //         ),
-          //       );
-          //     })
+
         ],
       ),
     );
